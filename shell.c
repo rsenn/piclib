@@ -47,14 +47,16 @@ const cmd_t cmds[] = {
 	{ "bitop", &cmd_bitop },
 };
 
-void shell_puts(shell_t* sh, const char* s)
+void
+shell_puts(shell_t* sh, const char* s)
 {
 	while(*s) {
 		sh->putch(*s++);
 	}
 }
 
-void shell_init(shell_t* sh, get_fn* get, put_fn* put)
+void
+shell_init(shell_t* sh, get_fn* get, put_fn* put)
 {
 	sh->pos = sh->len = 0;
 	sh->getch = get;
@@ -63,7 +65,8 @@ void shell_init(shell_t* sh, get_fn* get, put_fn* put)
 	shell_puts(sh, "pictest shell v1.0\n");
 }
 
-void shell_read(shell_t* sh, uint16_t timeout) {
+void
+shell_read(shell_t* sh, uint16_t timeout) {
 	char *p;
 	int ch;
 	uint8_t i;

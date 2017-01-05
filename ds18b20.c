@@ -3,7 +3,8 @@
 #include "ds18b20.h"
 
 // ---------------------------------------------------------------------------
-BOOL ds18b20_start_conversion(int8_t actNumROM, BOOL parasite_power) {
+BOOL
+ds18b20_start_conversion(int8_t actNumROM, BOOL parasite_power) {
   if(!ow_reset()) {    // If a device is present
     ow_write_byte(OW_SKIP_ROM, 0); // Skip Rom command
     ow_write_byte(DS18B20_CONVERT_T, parasite_power); // Temperature convert command
@@ -15,7 +16,8 @@ BOOL ds18b20_start_conversion(int8_t actNumROM, BOOL parasite_power) {
 }
 
 // ---------------------------------------------------------------------------
-uint16_t ds18b20_value(int8_t actNumROM) {
+uint16_t
+ds18b20_value(int8_t actNumROM) {
   uint8_t scratch[9];
   uint16_t v = 0;
   int i;
@@ -53,7 +55,8 @@ uint16_t ds18b20_value(int8_t actNumROM) {
 
 
 // ---------------------------------------------------------------------------
-double ds18b20_temperature(uint16_t value, uint8_t shift) {
+double
+ds18b20_temperature(uint16_t value, uint8_t shift) {
   double t;
 
   t = (double)value;

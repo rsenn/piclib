@@ -45,7 +45,8 @@
 uint8_t softser_rdata;            // holds the serial byte that was received
 
 
-void softser_init(void) {
+void
+softser_init(void) {
   //T0CS = 0;
   //PSA = 0;
 //  PS0 = 0; PS1 = 0; PS2 = 0; // prescaler 1:2
@@ -165,17 +166,20 @@ softser_putch(uint8_t data) {
 
 }
 
-void softser_puts(const char * s) {
+void
+softser_puts(const char * s) {
   while(*s)
     softser_putch(*s++);
 }
 
-void softser_puts2(uint8_t * s) {
+void
+softser_puts2(uint8_t * s) {
   while(*s)
     softser_putch(*s++);
 }
 
-void softser_puthex(uint8_t v) {
+void
+softser_puthex(uint8_t v) {
   uint8_t c;
 
   c = v >> 4;

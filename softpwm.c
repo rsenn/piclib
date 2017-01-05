@@ -17,7 +17,8 @@ uint8_t volatile softpwm_values[SOFTPWM_PIN_COUNT];
  * @return received character or 0 if it's not SOFTPWM interrupt
  */
 void
-softpwm_isr(void) SOFTPWM_ISR()
+softpwm_isr(void)
+SOFTPWM_ISR()
 
 void
 softpwm_enable(void) {

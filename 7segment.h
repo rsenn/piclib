@@ -1,5 +1,5 @@
-#ifndef _7SEGMENT_H__
-#define _7SEGMENT_H__
+#ifndef PICLIB_7SEGMENT_H__
+#define PICLIB_7SEGMENT_H__
 
 #include "typedef.h"
 
@@ -127,5 +127,5 @@ void display_init();
 void display_set(uint8_t index, char segs);
 void display_number(short n);
 
-#endif // _7SEGMENT_H__
+#endif // PICLIB_7SEGMENT_H__
  

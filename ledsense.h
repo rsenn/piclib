@@ -1,5 +1,5 @@
-#ifndef LEDSENSE_H
-#define LEDSENSE_H
+#ifndef PICLIB_LEDSENSE_H
+#define PICLIB_LEDSENSE_H
 
 #include "typedef.h"
 

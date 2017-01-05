@@ -1,5 +1,5 @@
-#ifndef UART_H
-#define UART_H
+#ifndef PICLIB_UART_H
+#define PICLIB_UART_H
 
 #include "device.h"
 #include "typedef.h"
@@ -74,5 +74,5 @@ void uart_puts(const char *s);
 void uart_puts2(uint8_t *s);
 
 
-#endif /* UART_H */
+#endif /* PICLIB_UART_H */
  

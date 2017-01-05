@@ -1,5 +1,5 @@
-#ifndef TYPES_H
-# define TYPES_H 1
+#ifndef PICLIB_TYPES_H
+# define PICLIB_TYPES_H 1
 
 # include "device.h"
 
@@ -68,4 +68,4 @@ typedef char BOOL;
 typedef char (putchar_fn)(char);
 typedef putchar_fn* putchar_p;
 
-#endif // !defined(TYPES_H)
+#endif // !defined(PICLIB_TYPES_H)

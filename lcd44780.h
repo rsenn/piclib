@@ -1,5 +1,5 @@
-#ifndef LCD44780_H
-#define LCD44780_H
+#ifndef PICLIB_LCD44780_H
+#define PICLIB_LCD44780_H
 
 #include "device.h"
 #include "typedef.h"
@@ -84,5 +84,5 @@ char lcd_putch(char value);
 #define LCDSETCURSOR
 
 
-#endif /* LCD44780_H */
+#endif /* PICLIB_LCD44780_H */
  

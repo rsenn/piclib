@@ -1,5 +1,5 @@
-#ifndef ADC_H
-#define ADC_H
+#ifndef PICLIB_ADC_H
+#define PICLIB_ADC_H
 
 #include "typedef.h"
 
@@ -31,5 +31,5 @@ adc_disable(void);
 char
 adc_isr(void);
 
-#endif /* ADC_H */
+#endif /* PICLIB_ADC_H */
  

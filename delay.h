@@ -1,5 +1,5 @@
-#ifndef DELAY_H
-#define DELAY_H
+#ifndef PICLIB_DELAY_H
+#define PICLIB_DELAY_H
 
 #include "device.h"
 #include "typedef.h"

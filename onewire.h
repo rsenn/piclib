@@ -1,5 +1,5 @@
-#ifndef ONEWIRE_H
-#define ONEWIRE_H 1
+#ifndef PICLIB_ONEWIRE_H
+#define PICLIB_ONEWIRE_H 1
 
 #include "typedef.h"
 
@@ -47,5 +47,5 @@ ow_write_byte(uint8_t val, BOOL power_on);
 char
 ow_access(uint8_t actNumRom) ;
 
-#endif // defined(ONEWIRE_H)
+#endif // defined(PICLIB_ONEWIRE_H)
  

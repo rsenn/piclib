@@ -1,5 +1,5 @@
-#ifndef LCD5110_H
-#define LCD5110_H
+#ifndef PICLIB_LCD5110_H
+#define PICLIB_LCD5110_H
 
 #include "device.h"
 #include "typedef.h"

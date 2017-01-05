@@ -1,5 +1,5 @@
-#ifndef FORMAT_H
-#define FORMAT_H 1
+#ifndef PICLIB_FORMAT_H
+#define PICLIB_FORMAT_H 1
 
 #include "typedef.h"
 
@@ -11,4 +11,4 @@ format_double(putchar_p putchar, double n);
 void
 format_xint32(putchar_p putchar, uint32_t x);
 
-#endif // defined FORMAT_H
+#endif // defined PICLIB_FORMAT_H

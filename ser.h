@@ -27,8 +27,8 @@
  * SOFTWARE.
 */
 
-#ifndef _SER_H_
-#define _SER_H_
+#ifndef PICLIB_SER_H_
+#define PICLIB_SER_H_
 
 #ifdef USE_SER
 

@@ -1,5 +1,5 @@
-#ifndef TIMER_H
-#define TIMER_H 1
+#ifndef PICLIB_TIMER_H
+#define PICLIB_TIMER_H 1
 
 #include "typedef.h"
 #include "device.h"
@@ -99,5 +99,5 @@ void timer2_init(uint8_t ps_mode);
 
 #endif // USE_TIMER2
 
-#endif // defined TIMER_H
+#endif // defined PICLIB_TIMER_H
  

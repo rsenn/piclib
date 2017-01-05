@@ -1,5 +1,5 @@
-#ifndef DS18B20_H
-#define DS18B20_H 1
+#ifndef PICLIB_DS18B20_H
+#define PICLIB_DS18B20_H 1
 
 #include "typedef.h"
 #include "onewire.h"
@@ -24,5 +24,5 @@ BOOL ds18b20_start_conversion(int8_t actNumROM, BOOL parasite_power);
 uint16_t ds18b20_value(int8_t actNumROM);
 double ds18b20_temperature(uint16_t value, uint8_t shift);
 
-#endif // DS18B20_H
+#endif // PICLIB_DS18B20_H
  

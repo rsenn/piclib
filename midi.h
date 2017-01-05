@@ -1,5 +1,5 @@
-#ifndef MIDI_H
-#define MIDI_H 1
+#ifndef PICLIB_MIDI_H
+#define PICLIB_MIDI_H 1
 
 #include "typedef.h"
 

@@ -1,5 +1,5 @@
-#ifndef SHELL_H
-#define SHELL_H
+#ifndef PICLIB_SHELL_H
+#define PICLIB_SHELL_H
 
 #include "typedef.h"
 

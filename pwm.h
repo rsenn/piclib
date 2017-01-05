@@ -1,5 +1,5 @@
-#ifndef PWM_H
-#define PWM_H
+#ifndef PICLIB_PWM_H
+#define PICLIB_PWM_H
 
 #include "typedef.h"
 
@@ -17,5 +17,5 @@ void pwm_init(char ps);
 
 #define PWM_SETDUTY(ccp, duty) PWM_CCP##ccp##_SETDUTY(duty)
 
-#endif /* PWM_H */
+#endif /* PICLIB_PWM_H */
  

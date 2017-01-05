@@ -27,8 +27,8 @@
  * SOFTWARE.
 */
 
-#ifndef _SOFTSER_H_
-#define _SOFTSER_H_
+#ifndef PICLIB_SOFTSER_H_
+#define PICLIB_SOFTSER_H_
 
 #include "typedef.h"
 #include "oscillator.h"

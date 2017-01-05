@@ -1,5 +1,5 @@
-#ifndef SOFTPWM_H
-#define SOFTPWM_H
+#ifndef PICLIB_SOFTPWM_H
+#define PICLIB_SOFTPWM_H
 
 #include "timer.h"
 
@@ -79,5 +79,5 @@ void softpwm_disable(void);
  */
 void softpwm_set(uint8_t ch, uint8_t duty);
 
-#endif /* SOFTPWM_H */
+#endif /* PICLIB_SOFTPWM_H */
  

@@ -1,5 +1,5 @@
-#ifndef BUFFER_H
-#define BUFFER_H 1
+#ifndef PICLIB_BUFFER_H
+#define PICLIB_BUFFER_H 1
 
 #include "typedef.h"
 
@@ -44,4 +44,4 @@ int buffer_feed();
 int buffer_getc(char *x);
 int buffer_getn(char *x, len_t len);*/
 
-#endif // defined BUFFER_H
+#endif // defined PICLIB_BUFFER_H

@@ -1,5 +1,5 @@
-#ifndef OSCILLATOR_H
-#define OSCILLATOR_H 1
+#ifndef PICLIB_OSCILLATOR_H
+#define PICLIB_OSCILLATOR_H 1
 
 //#ifdef _XTAL_FREQ
 //#warning External _XTAL_FREQ
@@ -19,5 +19,5 @@
 #define US_TO_OVERFLOWS(us,period) (US_CYCLES(us)/(period))
 #define MS_TO_OVERFLOWS(ms,period) (MS_CYCLES(ms)/(period))
 
-#endif // !defined(OSCILLATOR_H)
+#endif // !defined(PICLIB_OSCILLATOR_H)
  

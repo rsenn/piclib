@@ -45,7 +45,7 @@ uart_getch(void) {
 
 // returns 1 when start bit received or 0 when timeout
 //---------------------------------------------------------
-bool
+BOOL
 uart_poll(uint8_t bauds) {
 
     // TMR0 -= SOFTSER_BRG;            // load corrected baud value
@@ -76,12 +76,11 @@ uart_isr(void) {
 
 void
 uart_enable(void) {
+  RX_TRIS = 1;
+  TX_TRIS = TX_PIN = 0;
   TXEN = 1;
   SPEN = 1;
   RCIE = 0;
-  RX_TRIS = 1;
-  TX_TRIS = 0;
-  TX_PIN = 0;
 }
 
 void
@@ -90,7 +89,7 @@ uart_disable(void) {
   SPEN = 0;
   RCIE = 0;
   RX_TRIS = 1;
-  TX_TRIS = 1;
+  TX_PIN = TX_TRIS = 0;
 }
 
 void

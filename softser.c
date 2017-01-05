@@ -53,11 +53,11 @@ void softser_init(void) {
   //T0PS = SOFTSER_PS;
 
 #if SOFTSER_TIMER == 0
-  timer0_init(PRESCALE_1_1);
+  timer0_init(SOFTSER_PS);
 #elif SOFTSER_TIMER == 1
-  timer1_init(PRESCALE_1_1);
+  timer1_init(SOFTSER_PS);
 #elif SOFTSER_TIMER == 2
-  timer2_init(PRESCALE_1_1);
+  timer2_init(SOFTSER_PS);
 #else
   #warning No timer setup for soft serial!
 #endif  
@@ -72,7 +72,7 @@ void softser_init(void) {
 
 // returns 1 when start bit received or 0 when timeout
 //---------------------------------------------------------
-bool
+BOOL
 softser_poll(uint8_t bauds) {
   int i = bauds;
 

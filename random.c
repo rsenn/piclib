@@ -27,3 +27,4 @@ random()
   c = (c + (b >> 1)^a); // the right shift is to ensure that high-order bits from b can affect
   return (c);           // low order bits of other variables
 }
+

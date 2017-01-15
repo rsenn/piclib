@@ -12,3 +12,4 @@ void
 format_xint32(putchar_p putchar, uint32_t x);
 
 #endif // defined PICLIB_FORMAT_H
+

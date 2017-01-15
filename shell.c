@@ -116,3 +116,4 @@ int cmd_bitop(const cmd_t *cmd, char* arg) {
 	return 0;
 }
  
+

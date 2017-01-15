@@ -75,3 +75,4 @@ ds18b20_temperature(uint16_t value, uint8_t shift) {
   return t;
 }
  
+

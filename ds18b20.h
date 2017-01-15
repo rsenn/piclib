@@ -26,3 +26,4 @@ double ds18b20_temperature(uint16_t value, uint8_t shift);
 
 #endif // PICLIB_DS18B20_H
  
+

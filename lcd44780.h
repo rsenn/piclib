@@ -86,3 +86,4 @@ char lcd_putch(char value);
 
 #endif /* PICLIB_LCD44780_H */
  
+

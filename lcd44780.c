@@ -44,16 +44,11 @@ static uint8_t LCD_function, LCD_ctrl, LCD_mode
 
 
 /** Positive pulse on E */
-void
-lcd_pulse_enable(void) {
-
-  //EN_PIN = LOW;
-  //__delay_us(4);
-  EN_PIN = HIGH;
-  __delay_us(4);    // enable pulse must be >450ns
-  EN_PIN = LOW;
-  __delay_us(100);   // commands need > 37us to settle
-}
+ // enable pulse must be >450ns
+  // commands need > 37us to settle
+#define lcd_pulse_enable()   \
+  EN_PIN = HIGH;  __delay_us(4);  \
+  EN_PIN = LOW; __delay_us(100); 
 
 // -------------------------------------------------------------------------
 /** Write using 4bits mode */
@@ -544,3 +539,4 @@ lcd_init(char fourbitmode) {
 
 #endif // USE_HD44780_LCD
  
+

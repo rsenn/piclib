@@ -52,8 +52,13 @@ timer1_init(uint8_t ps_mode) {
   
   TMR1CS = !!(ps_mode & TIMER1_FLAGS_EXTCLK);   // Internal clock source
 
-  if (TMR1CS)
+  if (TMR1CS) {
+#if defined(__12f1840) || defined(__16f628a) 
+    nT1SYNC = !!(ps_mode & TIMER1_FLAGS_SYNC);
+#else
     /*T1CONbits.*/T1SYNC = !(ps_mode & TIMER1_FLAGS_SYNC);
+#endif
+    }
 
   T1OSCEN = 0;
 

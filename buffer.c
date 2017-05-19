@@ -12,7 +12,7 @@ buffer_init(putchar_p op) {
 char
 buffer_flush() {
   while(buffer.p < buffer.n) {
-    buffer.op(buffer.x[buffer.p++]);
+//    buffer.op(buffer.x[buffer.p++]);
   }
   BUFFER_CLEAR();
   return 0;
@@ -23,7 +23,8 @@ buffer_putch(char ch) {
   if(BUFFER_SIZE -  buffer.n <= 0) {
     return 0;
   }
-  buffer.x[buffer.n++] = ch;
+  buffer.x[buffer.n] = ch;
+  buffer.n++;
   return 1;
 }
 
@@ -55,3 +56,4 @@ buffer_puts(const char *x) {
   }
   return 0;
 }
+

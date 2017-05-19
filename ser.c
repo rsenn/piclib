@@ -150,7 +150,7 @@ SER_RX_PIN = INPUT;
   SPEN = 1;
   CREN = 1;
   TXIE = 0;
-  RCIE = 1;
+//  RCIE = 1;
   TXEN = 1;
   PEIE = 1;
 
@@ -159,3 +159,4 @@ SER_RX_PIN = INPUT;
 
 #endif // USE_SER
  
+

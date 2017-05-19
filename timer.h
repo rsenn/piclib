@@ -47,7 +47,7 @@
 #define TIMER0_FLAGS_INTR   0x80
 #define TIMER0_FLAGS_EXTCLK 0x40
 
-#define TIMER0_VALUE TMR0
+#define TIMER0_VALUE TMR0 
 #define TIMER0_BITS 8
 
 void timer0_init(uint8_t prescale);
@@ -70,7 +70,11 @@ void timer0_init(uint8_t prescale);
 
 void timer1_init(uint8_t ps_mode);
 
-#define TIMER1_VALUE TMR1 //((TMR1H << 8)|TMR1L)
+#ifdef TMR1
+#define TIMER1_VALUE TMR1 
+#else
+#define TIMER1_VALUE ((TMR1H << 8)|TMR1L)
+#endif
 #define TIMER1_BITS 16
 
 #endif // USE_TIMER1
@@ -101,3 +105,4 @@ void timer2_init(uint8_t ps_mode);
 
 #endif // defined PICLIB_TIMER_H
  
+

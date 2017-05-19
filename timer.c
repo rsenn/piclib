@@ -47,15 +47,23 @@ T0PS=(prescaler-1);
 void
 timer1_init(uint8_t ps_mode) {
 
-  T1CONbits.T1CKPS = ps_mode & PRESCALE_MASK; // 1:1 prescaler
+  /*T1CONbits.*/T1CKPS0 = (ps_mode & PRESCALE_MASK) & 1; // 1:1 prescaler
+  /*T1CONbits.*/T1CKPS1 = (ps_mode & PRESCALE_MASK) >> 1; 
+  
   TMR1CS = !!(ps_mode & TIMER1_FLAGS_EXTCLK);   // Internal clock source
 
-  if (TMR1CS)
+  if (TMR1CS) {
+#if defined(__12f1840) || defined(__16f628a) 
+    nT1SYNC = !!(ps_mode & TIMER1_FLAGS_SYNC);
+#else
     /*T1CONbits.*/T1SYNC = !(ps_mode & TIMER1_FLAGS_SYNC);
+#endif
+    }
 
   T1OSCEN = 0;
 
-  TIMER1_VALUE = 0;
+  TMR1H = 0;
+  TMR1L = 0;
 
   /*T1CONbits.*/TMR1ON = 1;
 
@@ -77,7 +85,9 @@ void timer2_init(uint8_t ps_mode) {
   TOUTPS0 = postscaler & 1;
   TOUTPS1 = (postscaler >> 1) & 1;
   TOUTPS2 = (postscaler >> 2) & 1;
-  T2CONbits.T2CKPS = ps >> 1; // Set timer 2 prescaler to 1:1.
+  
+  /*T2CONbits.*/T2CKPS0 = (ps >> 1) & 1; // Set timer 2 prescaler to 1:1.
+  /*T2CONbits.*/T2CKPS1 = (ps >> 2) & 1; // Set timer 2 prescaler to 1:1.
 
   TIMER2_VALUE = 0;
 
@@ -88,3 +98,4 @@ void timer2_init(uint8_t ps_mode) {
 }
 #endif // USE_TIMER2
  
+

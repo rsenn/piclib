@@ -379,3 +379,4 @@ lcd_symbol(const char* sym)
 }
 
 #endif // USE_NOKIA5110_LCD
+

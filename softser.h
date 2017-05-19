@@ -37,11 +37,17 @@
 // to PC serial port using just 2 resistors.
 #define SOFTSER_INVERT 1
 
+#if NO_PORTB
+#define SOFTSER_IN_PIN  RA0          // pin for serial out
+#define SOFTSER_IN_TRIS TRISA0
+#define SOFTSER_OUT_PIN   RA1          // pin for serial input
+#define SOFTSER_OUT_TRIS  TRISA1
+#else
 #define SOFTSER_IN_PIN  RB0          // pin for serial out
 #define SOFTSER_IN_TRIS TRISB0
-
 #define SOFTSER_OUT_PIN   RB1          // pin for serial input
 #define SOFTSER_OUT_TRIS  TRISB1
+#endif
 
 #ifndef SOFTSER_BAUD
 #define SOFTSER_BAUD UART_BAUD //31250
@@ -147,3 +153,4 @@ extern uint8_t softser_rdata;
 
 #endif
  
+

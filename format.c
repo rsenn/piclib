@@ -68,4 +68,3 @@ format_double(putchar_p putchar, double num) {
     m--;
   }
 }
-
